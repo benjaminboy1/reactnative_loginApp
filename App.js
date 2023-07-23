@@ -1,20 +1,55 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView,Image } from 'react-native';
+import  MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export default function App() {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Header } from 'react-native/Libraries/NewAppScreen';
+
+const Stack = createNativeStackNavigator();
+
+ const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <NavigationContainer>
+    <Stack.Navigator >
+      <Stack.Screen component={Main} name="Main" options={{headerShown:false}}/>
+      <Stack.Screen component={Home} name="Home"/>
+    </Stack.Navigator>
+  </NavigationContainer>
+
+  );
+  
+};
+
+const Main = ({navigation}) => {
+  return (
+
+    <SafeAreaView style={{flex:1, justifyContent:'center', alignItems:'center', backgroundColor:'#fff'}}>
+      <View>
+      <Text style={{fontSize:30, fontWeight:'bold', color:'#20315f', bottom:90}}>GAMER</Text>
       <StatusBar style="auto" />
     </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    <Image source={require('./assets/game.jpg')} style={{width:320, height:300, borderRadius:50, transform:[{rotate: '-15deg'}]}} />
+
+    <TouchableOpacity
+     onPress={()=> navigation.navigate('Home')}
+     style={{backgroundColor:'#252533', padding:20, width:'90%', flexDirection:'row', borderRadius:20, top:160, justifyContent:'space-between' }}>
+      <Text style={{fontSize:18, fontWeight:'bold', color:'#fff',}}>Get started</Text>
+      <MaterialIcons name="arrow-forward-ios" size={22} color="#fff"/>
+    </TouchableOpacity>
+    </SafeAreaView>
+    
+  );
+};
+
+
+const Home = () => {
+  return (
+    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+      <Text>Hom screen</Text>
+    </View>
+  );
+};
+
+export default App;
