@@ -40,6 +40,7 @@ const Main = ({navigation}) => {
     </TouchableOpacity>
     </SafeAreaView>
     
+    
   );
 };
 
