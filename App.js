@@ -5,7 +5,7 @@ import  MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Header } from 'react-native/Libraries/NewAppScreen';
-
+import HomeScreen from './src/assets/screens/HomeScreen';
 const Stack = createNativeStackNavigator();
 
  const App = () => {
@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
     <NavigationContainer>
     <Stack.Navigator >
       <Stack.Screen component={Main} name="Main" options={{headerShown:false}}/>
-      <Stack.Screen component={Home} name="Home"/>
+      <Stack.Screen component={HomeScreen} name="Home" options={{headerShown:false}}/>
     </Stack.Navigator>
   </NavigationContainer>
 
@@ -30,7 +30,7 @@ const Main = ({navigation}) => {
       <StatusBar style="auto" />
     </View>
 
-    <Image source={require('./assets/game.jpg')} style={{width:320, height:300, borderRadius:50, transform:[{rotate: '-15deg'}]}} />
+    <Image source={require('./src/assets/game.jpg')} style={{width:320, height:300, borderRadius:50, transform:[{rotate: '-15deg'}]}} />
 
     <TouchableOpacity
      onPress={()=> navigation.navigate('Home')}
@@ -40,17 +40,17 @@ const Main = ({navigation}) => {
     </TouchableOpacity>
     </SafeAreaView>
     
-    
+
   );
 };
 
 
-const Home = () => {
+/*const Home = () => {
   return (
     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
       <Text>Hom screen</Text>
     </View>
   );
 };
-
+*/
 export default App;
