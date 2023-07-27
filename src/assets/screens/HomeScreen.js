@@ -67,7 +67,7 @@ const HomeScreen = () => {
             />
 
             <View style={{
-                marginTop:15
+                marginVertical:20,
             }}>
                 <CustomSwitch 
                 selectionMode={1}
@@ -86,5 +86,6 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen;
+
 
 const styles = StyleSheet.create({})
