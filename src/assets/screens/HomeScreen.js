@@ -7,7 +7,6 @@ import Carousel from 'react-native-snap-carousel';
 import BannerSlider from '../components/BannerSlider';
 import { windowWidth } from '../utils/Dimensions';
 
-
 import CustomSwitch from '../components/CustomSwitch';
 import Listitem from '../components/Listitem';
 import { freeGames } from '../model/data';
