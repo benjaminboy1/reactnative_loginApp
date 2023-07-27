@@ -38,6 +38,45 @@ export const paidGames = [
         subtitle: "Fifa",
         isFree: "No",
         price: '$25.99',
+        
+    },
+];
+
+export const freeGames = [
+    {
+        Poster: require('../images/racing.jpeg'),
+        title: 'Racing 23',
+        subtitle: "EA",
+        isFree: "Yes",
+        id: '1',
+    },
+    {
+        Poster: require('../images/fifa.jpeg'),
+        title: 'Racing 23',
+        subtitle: "EA",
+        isFree: "Yes",
         id: '2',
+    },
+    //
+    {
+        Poster: require('../images/Rockstar.avif'),
+        title: 'Racing 23',
+        subtitle: "EA",
+        isFree: "Yes",
+        id: '3',
+    },
+    {
+        Poster: require('../images/racing.jpeg'),
+        title: 'Racing 23',
+        subtitle: "EA",
+        isFree: "Yes",
+        id: '4',
+    },
+    {
+        Poster: require('../images/asphalt9.jpeg'),
+        title: 'Racing 23',
+        subtitle: "EA",
+        isFree: "Yes",
+        id: '5',
     },
 ];

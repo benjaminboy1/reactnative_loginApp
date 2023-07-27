@@ -8,8 +8,10 @@ import Carousel from 'react-native-snap-carousel';
 import BannerSlider from '../components/BannerSlider';
 import { windowWidth } from '../utils/Dimensions';
 
-import sliderData from '../model/data';
+
 import CustomSwitch from '../components/CustomSwitch';
+import Listitem from '../components/Listitem';
+import { freeGames } from '../model/data';
 
 
 const HomeScreen = () => {
@@ -77,7 +79,9 @@ const HomeScreen = () => {
                 />
             </View>
 
-            {gamesTab == 1 && <Text>Pay Games</Text>}
+            {gamesTab == 1 && freeGames.map(item => (
+                 < Listitem key={item.id} photo={item.Poster} title={item.title} subtitle={item.subtitle} isFree={item.isFree} price={item.price}/> 
+            ))}
             {gamesTab == 2 && <Text>Free Games</Text>}
         </ScrollView>
        </SafeAreaView>

@@ -34,7 +34,7 @@ const CustomSwitch = ({selectionMode, option1, option2, onSelectSwitch}) => {
       <Text style={{
         color: getSelectionMode == 1 ? 'white' : '#16324F',
         fontSize: 14,
-      }}>{option2}</Text>
+      }}>{option1}</Text>
 
         </TouchableOpacity>
         <TouchableOpacity
