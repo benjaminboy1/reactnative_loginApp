@@ -4,7 +4,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Feather from 'react-native-vector-icons/Feather';
 import Carousel from 'react-native-snap-carousel';
 
-
 import BannerSlider from '../components/BannerSlider';
 import { windowWidth } from '../utils/Dimensions';
 
