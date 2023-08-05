@@ -45,7 +45,7 @@ export const paidGames = [
 export const freeGames = [
     {
         Poster: require('../images/racing.jpeg'),
-        title: 'Racing 23',
+        title: 'Racing championship of the world',
         subtitle: "EA",
         isFree: "Yes",
         id: '1',

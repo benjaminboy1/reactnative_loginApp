@@ -9,10 +9,12 @@ import { windowWidth } from '../utils/Dimensions';
 
 import CustomSwitch from '../components/CustomSwitch';
 import Listitem from '../components/Listitem';
-import { freeGames } from '../model/data';
+import { freeGames, paidGames } from '../model/data';
 
 
-const HomeScreen = () => {
+
+
+const HomeScreen = ({navigation}) => {
     const [gamesTab, setGamesTab] = useState(1);
     const renderBanner = ({item, index}) => {
         return <BannerSlider data={item}/>
@@ -27,11 +29,15 @@ const HomeScreen = () => {
         <ScrollView style={{padding:20}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between', marginBottom:20}}>
             <Text style={{fontSize:18}}>Hello Benjmain mumbita</Text>
+            
+            <TouchableOpacity onPress={()=>navigation.goBack()}>
             <ImageBackground 
             source={require('../images/benja.jpeg')}
             style={{height:40, width:40, }}
             imageStyle={{borderRadius:50}} 
-            />
+            /> 
+            </TouchableOpacity>
+          
             </View>
             <View 
             style={{flexDirection: 'row', 
@@ -78,9 +84,23 @@ const HomeScreen = () => {
             </View>
 
             {gamesTab == 1 && freeGames.map(item => (
-                 < Listitem key={item.id} photo={item.Poster} title={item.title} subtitle={item.subtitle} isFree={item.isFree} price={item.price}/> 
+                 < Listitem 
+                 key={item.id} 
+                 photo={item.Poster} 
+                 title={item.title} 
+                 subtitle={item.subtitle} 
+                 isFree={item.isFree} 
+                 id={item.id}/> 
             ))}
-            {gamesTab == 2 && <Text>Free Games</Text>}
+            {gamesTab == 2 && paidGames.map(item => (
+                 <Listitem 
+                  
+                  photo={item.Poster}
+                  title={item.title}
+                  subtitle={item.subtitle} 
+                  isFree={item.isFree} 
+                  price={item.price}/>
+            ))}
         </ScrollView>
        </SafeAreaView>
       );
