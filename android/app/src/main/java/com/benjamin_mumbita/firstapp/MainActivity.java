@@ -1,4 +1,4 @@
-package com.firstapp;
+package com.benjamin_mumbita.firstapp;
 
 import android.os.Build;
 import android.os.Bundle;

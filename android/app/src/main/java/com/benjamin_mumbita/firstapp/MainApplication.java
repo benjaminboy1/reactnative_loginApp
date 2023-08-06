@@ -1,4 +1,4 @@
-package com.firstapp;
+package com.benjamin_mumbita.firstapp;
 
 import android.app.Application;
 import android.content.res.Configuration;
