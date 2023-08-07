@@ -8,6 +8,7 @@ import BannerSlider from '../components/BannerSlider';
 import { windowWidth } from '../utils/Dimensions';
 
 import CustomSwitch from '../components/CustomSwitch';
+import CustomDrawer from '../components/CustomDrawer';
 import Listitem from '../components/Listitem';
 import { freeGames, paidGames } from '../model/data';
 
@@ -30,7 +31,7 @@ const HomeScreen = ({navigation}) => {
             <View style={{flexDirection:'row', justifyContent: 'space-between', marginBottom:20}}>
             <Text style={{fontSize:18}}>Hello Benjmain mumbita</Text>
             
-            <TouchableOpacity onPress={()=>navigation.goBack()}>
+            <TouchableOpacity onPress={()=>navigation.openDrawer()}>
             <ImageBackground 
             source={require('../images/benja.jpeg')}
             style={{height:40, width:40, }}
