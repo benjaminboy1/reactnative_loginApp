@@ -8,6 +8,7 @@ import ProfilesScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import MessagesScreen from '../screens/MessagesScreen';
 import MomentsScreen from '../screens/MomentsScreen';
+import Tabnavigation from './Tabnavigation';
 
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -26,7 +27,7 @@ const AuthStack = () => {
       drawerActiveTintColor: '#fff',
       drawerInactiveTintColor: '#333',
        drawerLabelStyle:{marginLeft:-25, fontSize:15}}}>
-        <Drawer.Screen name="Home" component={HomeScreen}  options={{
+        <Drawer.Screen name="Home" component={Tabnavigation}  options={{
           drawerIcon: ({color}) => (
             <Ionicons name="home-outline" size={22} color={color} />
             )

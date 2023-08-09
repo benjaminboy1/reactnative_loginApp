@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { windowWidth } from '../utils/Dimensions';
 
-const Listitem = ({Poster, photo, id, subtitle, isFree, title, price}) => {
+const Listitem = ({Poster, photo, id, subtitle, isFree, title, price, onPress}) => {
 
 
   return (
@@ -16,7 +16,7 @@ const Listitem = ({Poster, photo, id, subtitle, isFree, title, price}) => {
       
        </View>
     </View>
-    <TouchableOpacity style={{backgroundColor:'#158', padding:10, borderRadius:10, width:100}}>
+    <TouchableOpacity onPress={onPress} style={{backgroundColor:'#158', padding:10, borderRadius:10, width:100}}>
         <Text style={{textAlign:'center', color:'#fff', fontSize:14}}>
        {isFree == 'Yes' && 'play'}
        {isFree ==  'No' && price}

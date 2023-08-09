@@ -7,11 +7,12 @@ import Carousel from 'react-native-snap-carousel';
 import BannerSlider from '../components/BannerSlider';
 import { windowWidth } from '../utils/Dimensions';
 
+import OnboardingScreen from './OnboardingScreen';
 import CustomSwitch from '../components/CustomSwitch';
 import CustomDrawer from '../components/CustomDrawer';
 import Listitem from '../components/Listitem';
 import { freeGames, paidGames } from '../model/data';
-
+import { onPress } from 'deprecated-react-native-prop-types/DeprecatedTextPropTypes';
 
 
 
@@ -91,7 +92,10 @@ const HomeScreen = ({navigation}) => {
                  title={item.title} 
                  subtitle={item.subtitle} 
                  isFree={item.isFree} 
-                 id={item.id}/> 
+                 id={item.id}
+                 onPress={() => navigation.navigate('GameDetails', {title: item.title, id:item.id,})}
+                 
+                 /> 
             ))}
             {gamesTab == 2 && paidGames.map(item => (
                  <Listitem 
@@ -100,13 +104,18 @@ const HomeScreen = ({navigation}) => {
                   title={item.title}
                   subtitle={item.subtitle} 
                   isFree={item.isFree} 
-                  price={item.price}/>
+                  price={item.price}
+                  onPress={() => navigation.navigate('GameDetails', {title: item.title, id:item.id,})}
+                  
+                  />
             ))}
         </ScrollView>
        </SafeAreaView>
       );
 
 }
+
+
 
 export default HomeScreen;
 

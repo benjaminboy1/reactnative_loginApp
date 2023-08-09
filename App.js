@@ -1,7 +1,7 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 
-
+import Tabnavigation from './src/assets/navigation/Tabnavigation';
 import AppStack from './src/assets/navigation/AppStack';
 
  const App = () => {

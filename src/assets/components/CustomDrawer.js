@@ -8,8 +8,13 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import OnboardingScreen from '../screens/OnboardingScreen';
 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const CustomDrawer = (props) => {
+const Stack = createNativeStackNavigator();
+
+
+
+const CustomDrawer = (props, Navigation) => {
   return (
    <View style={{flex:1}}>
     <DrawerContentScrollView  {...props} contentContainerStyle={{backgroundColor:'#0077b6'}}>
@@ -38,7 +43,8 @@ const CustomDrawer = (props) => {
     </TouchableOpacity>
 
     
-    <TouchableOpacity onPress={() => (OnboardingScreen)} style={{paddingVertical:15, }}>
+    <TouchableOpacity onPress={() => Navigation.navigate(Onboarding)}
+     style={{paddingVertical:15, }}>
     <View style={{flexDirection:'row', alignItems:'center'}}>
     <Ionicons name="exit-outline" size={22} />
     <Text style={{fontSize:15, marginLeft:5}}>Sign Up</Text>
