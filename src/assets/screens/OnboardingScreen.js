@@ -1,10 +1,12 @@
+import React from 'react'
+
+
 import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import  MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 
-import React from 'react'
-import LoginScreen from './LoginScreen';
+
 
 
 const OnboardingScreen = ({navigation}) => {
@@ -19,10 +21,12 @@ const OnboardingScreen = ({navigation}) => {
       <Image source={require('../images/game.jpg')} style={{width:320, height:300, borderRadius:50, transform:[{rotate: '-15deg'}]}} />
   
       <TouchableOpacity
-       onPress={()=> navigation.navigate('LoginScreen')}
-       style={{backgroundColor:'#252533', padding:20, width:'90%', flexDirection:'row', borderRadius:20, top:160, justifyContent:'space-between' }}>
+       style={{backgroundColor:'#252533', padding:20, width:'90%', flexDirection:'row', borderRadius:20, top:160, justifyContent:'space-between' }}
+       onPress={()=> navigation.navigate('Login')}
+       >
         <Text style={{fontSize:18, fontWeight:'bold', color:'#fff',}}>Get started</Text>
-        <MaterialIcons name="arrow-forward-ios" size={22} color="#fff"/>
+        <MaterialIcons name="arrow-forward-ios" size={22} color="#fff"
+        />
       </TouchableOpacity>
       </SafeAreaView>
       

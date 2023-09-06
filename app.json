@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "v"
+      "bundleIdentifier": "org.name.firstapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -32,6 +32,12 @@
       "eas": {
         "projectId": "b450125c-3f97-407a-9efa-05d65ffbe4d7"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b450125c-3f97-407a-9efa-05d65ffbe4d7"
     }
   }
 }

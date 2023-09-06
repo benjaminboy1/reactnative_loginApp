@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,  } from 'react-native'
 import React from 'react'
-import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import RegisterScreen from '../screens/RegistrerScreen';
 
 
 
@@ -12,7 +12,7 @@ import OnboardingScreen from '../screens/OnboardingScreen';
 const Stack = createNativeStackNavigator();
 
 
-const AuthStack = () => {
+const AuthStak = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen
@@ -20,11 +20,15 @@ const AuthStack = () => {
         component={OnboardingScreen}
         />
         <Stack.Screen
-        name="LoginScreen"
+        name="Login"
         component={LoginScreen}
+        />
+        <Stack.Screen
+        name="Register"
+        component={RegisterScreen}
         />
     </Stack.Navigator>
   );
 };
 
-export default AuthStack;
+export default AuthStak;

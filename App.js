@@ -1,20 +1,21 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 
-import Tabnavigation from './src/assets/navigation/Tabnavigation';
-import AppStack from './src/assets/navigation/AppStack';
+import AuthStak from './src/assets/navigation/AuthStak';
+
 
  const App = () => {
   return (
     <NavigationContainer>
-    <AppStack />
-   {/* <AuthStack />*/} 
+      <AuthStak/>
   </NavigationContainer>
+
+  
 
   );
   
 };
-
+  {/*  <AppStack /> */} 
 
 
 /*const Home = () => {
